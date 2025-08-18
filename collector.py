@@ -28,11 +28,11 @@ keywords = [' ios']
 exclude_keywords = [
     'flutter', 'не вакансия', 'Project Manager', 'ASO', 'CV по запросу',
     'kotlin', '#ищу', 'Product Designer', 'QA Engineer', 'React Native',
-    '#qa', '𝐏𝐑 𝐌𝐚𝐧𝐚𝐠𝐞𝐫', 'USER ACQUISITION', '#CV'
+    '#qa', '𝐏𝐑 𝐌𝐚𝐧𝐚𝐠𝐞𝐫', 'USER ACQUISITION', '#CV', 'Оператор колл-центра'
 ]
 
 # Настройка даты
-days_back = 1
+days_back = 3
 since_date = datetime.now(timezone.utc) - timedelta(days=days_back)
 
 client = TelegramClient('session_name', api_id, api_hash)
