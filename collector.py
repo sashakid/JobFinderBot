@@ -28,7 +28,7 @@ exclude_keywords = [
     'flutter', 'не вакансия', 'Project Manager', 'ASO', 'CV по запросу',
     'kotlin', '#ищу', 'Product Designer', 'QA Engineer', 'React Native',
     '#qa', '𝐏𝐑 𝐌𝐚𝐧𝐚𝐠𝐞𝐫', 'USER ACQUISITION', '#CV', 'Оператор колл-центра',
-    '#devops', '#aqa', '#TechArtist', '#ProductManager'
+    '#devops', '#aqa', '#TechArtist', '#ProductManager', '#System_analyst'
 ]
 
 client = TelegramClient('session_name', api_id, api_hash)
