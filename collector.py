@@ -2,11 +2,12 @@ import asyncio
 from datetime import datetime, timedelta, timezone
 from telethon import TelegramClient
 from telethon.errors import FloodWaitError
+from dotenv import load_dotenv
+load_dotenv()
 
-# Конфиг
-api_id = 22044758
-api_hash = '3b46d9d2b8ed960f93d3685d643dddb0'
-target_channel = -1002831333536
+api_id = int(os.getenv("API_ID"))
+api_hash = os.getenv("API_HASH")
+target_channel = int(os.getenv("TARGET_CHANNEL"))
 
 # Каналы для обхода
 channels = [
