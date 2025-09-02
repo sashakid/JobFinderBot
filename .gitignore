@@ -7,9 +7,6 @@ env/
 venv/
 .venv/
 
-# Telethon session files
-*.session
-
 # IDE / OS
 .idea/
 .vscode/
