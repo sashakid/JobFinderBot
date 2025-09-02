@@ -35,7 +35,6 @@ client = TelegramClient('session_name', api_id, api_hash)
 
 
 async def clear_channel(channel_username_or_id):
-    await client.start()
     entity = await client.get_entity(channel_username_or_id)
     async for msg in client.iter_messages(entity, reverse=True):
         try:
@@ -92,6 +91,9 @@ async def daily_task(hour, minute):
         wait_seconds = (target_time - now).total_seconds()
         print(f"Ждём {int(wait_seconds)} секунд до следующего запуска (UTC)...")
         await asyncio.sleep(wait_seconds)
+
+        print("🧹 Очистка канала перед сбором сообщений")
+        await clear_channel(target_channel)
 
         print("🚀 Запуск сбора сообщений за последние сутки")
         await search_and_send(days_back=1)
