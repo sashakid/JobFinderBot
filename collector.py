@@ -35,6 +35,7 @@ client = TelegramClient('session_name', api_id, api_hash)
 
 
 async def clear_channel(channel_username_or_id):
+    await client.start()
     entity = await client.get_entity(channel_username_or_id)
     async for msg in client.iter_messages(entity, reverse=True):
         try:
@@ -102,4 +103,4 @@ async def daily_task(hour, minute):
 
 if __name__ == '__main__':
     # Здесь указываешь точное время UTC, например 10:00 UTC
-    asyncio.run(daily_task(hour=11, minute=0))
+    asyncio.run(daily_task(hour=11, minute=15))
